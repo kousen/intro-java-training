@@ -1,0 +1,167 @@
+# JShell Commands Reference
+# This file contains useful JShell commands for demonstrations
+
+## Basic JShell Commands
+
+# Help
+/help
+
+# List all variables
+/vars
+
+# List all methods
+/methods
+
+# List all types (classes)
+/types
+
+# List everything
+/list
+
+# Save session
+/save filename.jsh
+
+# Load saved session
+/open filename.jsh
+
+# Exit JShell
+/exit
+
+## Demo 1: Variables and Simple Methods
+
+int x = 10
+double pi = 3.14159
+String message = "Hello, Java!"
+boolean isReady = true
+
+// Simple method
+int add(int a, int b) {
+    return a + b;
+}
+
+add(5, 3)
+
+// Method with String
+String greet(String name) {
+    return "Hello, " + name + "!";
+}
+
+greet("Alice")
+
+## Demo 2: String Operations
+
+String text = "Java Programming"
+text.length()
+text.toUpperCase()
+text.toLowerCase()
+text.charAt(0)
+text.substring(0, 4)
+text.contains("Java")
+text.replace("Java", "Python")
+
+// String splitting
+String csv = "apple,banana,orange"
+String[] fruits = csv.split(",")
+for (String fruit : fruits) {
+    System.out.println(fruit);
+}
+
+## Demo 3: Math Functions
+
+Math.sqrt(16)
+Math.pow(2, 8)
+Math.max(10, 20)
+Math.min(10, 20)
+Math.abs(-15)
+Math.round(3.7)
+Math.floor(3.7)
+Math.ceil(3.2)
+Math.random()
+
+// Random number between 1 and 10
+(int)(Math.random() * 10) + 1
+
+## Demo 4: Arrays
+
+int[] numbers = {1, 2, 3, 4, 5}
+numbers.length
+numbers[0]
+numbers[numbers.length - 1]
+
+// Sum of array
+int sum = 0
+for (int n : numbers) {
+    sum += n;
+}
+sum
+
+// Find max
+int max = numbers[0]
+for (int n : numbers) {
+    if (n > max) max = n;
+}
+max
+
+## Demo 5: Creating Classes
+
+class Person {
+    String name;
+    int age;
+    
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    void introduce() {
+        System.out.println("Hi, I'm " + name + " and I'm " + age + " years old.");
+    }
+}
+
+Person alice = new Person("Alice", 25)
+alice.introduce()
+alice.age = 26
+alice.introduce()
+
+## Demo 6: Lists
+
+import java.util.*
+
+List<String> names = new ArrayList<>()
+names.add("Alice")
+names.add("Bob")
+names.add("Charlie")
+names
+names.get(0)
+names.size()
+names.contains("Bob")
+names.remove("Bob")
+names
+
+## Demo 7: Maps
+
+Map<String, Integer> ages = new HashMap<>()
+ages.put("Alice", 25)
+ages.put("Bob", 30)
+ages.put("Charlie", 35)
+ages
+ages.get("Alice")
+ages.keySet()
+ages.values()
+
+## Demo 8: Working with null
+
+String s = null
+s  // Shows null
+// s.length()  // Would throw NullPointerException
+
+// Safe null checking
+if (s != null) {
+    s.length()
+} else {
+    System.out.println("s is null")
+}
+
+// Using ternary operator
+int len = (s != null) ? s.length() : 0
+len
