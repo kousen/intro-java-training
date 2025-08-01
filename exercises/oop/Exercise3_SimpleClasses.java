@@ -2,7 +2,7 @@ package exercises.oop;
 
 /**
  * Exercise 3: Writing Simple Classes
- * 
+ * <p>
  * Create the following classes with the specified functionality.
  */
 public class Exercise3_SimpleClasses {

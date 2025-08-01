@@ -2,7 +2,7 @@ package exercises.basics;
 
 /**
  * Exercise 2: Working with Strings
- * 
+ * <p>
  * Complete the following string manipulation tasks.
  */
 public class Exercise2_StringOperations {

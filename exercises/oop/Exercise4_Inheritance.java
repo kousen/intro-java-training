@@ -2,7 +2,7 @@ package exercises.oop;
 
 /**
  * Exercise 4: Working with Inheritance
- * 
+ * <p>
  * Create an inheritance hierarchy for employees.
  */
 public class Exercise4_Inheritance {

@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * Exercise 5: Working with Collections
- * 
+ * <p>
  * Complete the following collection-based tasks.
  */
 public class Exercise5_Collections {
