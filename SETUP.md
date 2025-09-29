@@ -11,10 +11,14 @@ This document outlines the software and environment requirements for the 5-hour 
 - **Verification**: Run `java -version` and `javac -version` in command prompt/terminal
 - **Note**: Java 17 includes the `jshell` interactive tool which we'll use extensively
 
-### IntelliJ IDEA
-- **Required**: IntelliJ IDEA (Community Edition is sufficient)
-- **Version**: 2022.1 or later (for optimal Java 17 support)
-- **Configuration**: Default installation settings are fine
+### Visual Studio Code
+- **Required**: Visual Studio Code (latest stable version)
+- **Extensions**: Extension Pack for Java (includes all necessary Java tools)
+- **Installation**:
+  1. Install VS Code from https://code.visualstudio.com/
+  2. Open VS Code and go to Extensions (Ctrl+Shift+X)
+  3. Search for "Extension Pack for Java" by Microsoft
+  4. Click Install (this includes Language Support, Debugger, Test Runner, and more)
 - **Note**: This will be our primary development environment
 
 ## Environment Setup
@@ -27,12 +31,12 @@ This document outlines the software and environment requirements for the 5-hour 
 
 ### Internet Access (Limited)
 - **Required**: Access to Oracle Java documentation (docs.oracle.com)
-- **Optional**: Access to IntelliJ documentation (jetbrains.com)
+- **Optional**: Access to VS Code Java documentation (code.visualstudio.com/docs/java)
 - **Note**: All course materials will be provided locally
 
 ### File System Permissions
 - **Required**: Ability to create and modify files in a designated course folder
-- **Required**: Ability to create new IntelliJ IDEA projects
+- **Required**: Ability to create new Java projects in VS Code
 - **Required**: Write access for compiling and running Java programs
 
 ## Pre-Training Verification
@@ -54,12 +58,12 @@ jshell
 ## Course Materials
 - All starter code and exercises will be provided at the beginning of the training
 - No external dependencies or build tools (Maven/Gradle) required
-- All examples designed to work with standard Java 17 and IntelliJ IDEA
+- All examples designed to work with standard Java 17 and VS Code
 
 ## IT Department Notes
 - No additional software downloads required during training
 - No external library dependencies
-- All development will use built-in Java tools and IntelliJ IDEA
+- All development will use built-in Java tools and VS Code
 - Course designed for restricted corporate environments
 
 ## Troubleshooting
@@ -67,7 +71,7 @@ If any of the verification commands fail, please contact your IT department to e
 1. Java 17 JDK is properly installed
 2. JAVA_HOME environment variable is set (if required by your organization)
 3. Java bin directory is in the system PATH
-4. IntelliJ IDEA is installed and can create new Java projects
+4. VS Code is installed with the Extension Pack for Java
 
 ## Contact
 If you have questions about these requirements, please contact [instructor contact information].

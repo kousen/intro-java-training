@@ -571,6 +571,59 @@ for (int i = 1; i <= 100; i++) {
 
 ---
 
+# Classes vs Database Tables: A Helpful Analogy
+
+<div class="grid grid-cols-2 gap-8">
+<div>
+
+```mermaid
+graph TD
+    A[Database Table: Person] --> B[Column: name VARCHAR]
+    A --> C[Column: age INTEGER]
+    A --> D[Column: email VARCHAR]
+
+    E[Row 1: 'Alice', 25, 'alice@ex.com']
+    F[Row 2: 'Bob', 30, 'bob@ex.com']
+    G[Row 3: 'Charlie', 28, 'charlie@ex.com']
+
+    A --> E
+    A --> F
+    A --> G
+```
+
+</div>
+<div>
+
+```mermaid
+graph TD
+    H[Java Class: Person] --> I[Field: String name]
+    H --> J[Field: int age]
+    H --> K[Field: String email]
+    H --> L[Method: introduce#40;#41;]
+
+    M[Object: Alice, 25, alice@ex.com]
+    N[Object: Bob, 30, bob@ex.com]
+    O[Object: Charlie, 28, charlie@ex.com]
+
+    H --> M
+    H --> N
+    H --> O
+```
+
+</div>
+</div>
+
+<v-clicks>
+
+- **Class = Table Definition**: Defines structure and data types
+- **Object = Table Row**: Individual instance with specific values
+- **Fields = Columns**: Data attributes
+- **Methods = Stored Procedures** (analogy breaks here, but adds behavior)
+
+</v-clicks>
+
+---
+
 # Creating a Simple Class
 
 ```java
@@ -880,7 +933,7 @@ Time: 15 minutes
 <div>
 
 ## This Section Covers:
-- IntelliJ IDEA basics
+- VS Code for Java development
 - Java compilation process
 - JVM architecture
 - Command-line tools
@@ -899,19 +952,20 @@ Time: 15 minutes
 
 ---
 
-# IntelliJ IDEA Overview
+# VS Code for Java Development
 
 <div class="flex items-center justify-between">
 <div>
 
 <v-clicks>
 
-- Industry-standard Java IDE
-- Smart code completion
+- Lightweight, fast editor
+- Java Extension Pack
+- IntelliSense code completion
 - Integrated debugging
-- Refactoring tools
-- Version control integration
+- Git integration
 - Built-in terminal
+- Cross-platform & free
 
 </v-clicks>
 
@@ -923,42 +977,44 @@ Time: 15 minutes
 
 ---
 
-# Creating a Project in IntelliJ
+# Setting up Java in VS Code
 
-1. File → New → Project
-2. Select Java
-3. Choose project SDK (Java 17)
+1. Install VS Code
+2. Install Extension Pack for Java
+3. Open folder for your project
 4. Create project structure:
    ```
    MyProject/
    ├── src/           # Source files
-   ├── out/           # Compiled classes
-   └── .idea/         # IDE settings
+   ├── bin/           # Compiled classes
+   └── .vscode/       # VS Code settings
    ```
+
+Extension Pack includes: Language Support, Debugger, Test Runner, Maven/Gradle
 
 ---
 
-# IntelliJ Key Features
+# VS Code Java Features
 
 ```java
-// Code completion (Ctrl+Space)
+// IntelliSense (Ctrl+Space)
 String name = "Java";
 name. // Shows all String methods
 
-// Generate code (Alt+Insert)
-// - Constructors
-// - Getters/Setters
-// - toString(), equals(), hashCode()
+// Code Actions (Ctrl+.)
+// - Generate constructors
+// - Generate getters/setters
+// - Generate toString(), equals(), hashCode()
 
-// Refactoring (Shift+F6)
-// - Rename variables/methods/classes
-// - Extract method/variable
-// - Inline
+// Refactoring (F2 to rename)
+// - Rename symbols
+// - Extract method/variable/constant
+// - Inline variable
 ```
 
 ---
 
-# IntelliJ Productivity Tips
+# VS Code Productivity Tips
 
 <div class="grid grid-cols-2 gap-8">
 <div>
@@ -966,11 +1022,12 @@ name. // Shows all String methods
 **Editing:**
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+Space` | Code completion |
-| `Alt+Enter` | Quick fix |
-| `Ctrl+/` | Comment line |
-| `Ctrl+D` | Duplicate line |
-| `Ctrl+Y` | Delete line |
+| `Ctrl+Space` | IntelliSense |
+| `Ctrl+.` | Quick fix |
+| `Ctrl+/` | Toggle comment |
+| `Alt+Shift+Down` | Copy line down |
+| `Ctrl+Shift+K` | Delete line |
+| `F2` | Rename symbol |
 
 </div>
 <div>
@@ -978,23 +1035,25 @@ name. // Shows all String methods
 **Running & Debugging:**
 | Shortcut | Action |
 |----------|--------|
-| `Shift+F10` | Run |
-| `Shift+F9` | Debug |
-| `Ctrl+Shift+F10` | Run current file |
+| `F5` | Start debugging |
+| `Ctrl+F5` | Run without debug |
+| `Shift+F5` | Stop debugging |
+| `F9` | Toggle breakpoint |
 
 </div>
 </div>
 
 ---
 
-# Exercise: First IntelliJ Project
+# Exercise: First VS Code Java Project
 
-Create a new project and:
+Create a new Java project:
 
-1. Create a `Main` class with main method
-2. Add a `Calculator` class with basic operations
-3. Use code generation for constructor
-4. Practice debugging with breakpoints
+1. Open VS Code and create a new folder
+2. Create `Main.java` with main method
+3. Add a `Calculator` class with basic operations
+4. Use Code Actions (Ctrl+.) to generate constructor
+5. Set breakpoints (F9) and debug (F5)
 
 <div class="mt-8 text-sm text-gray-500">
 

@@ -6,7 +6,7 @@ This repository contains all materials for a 5-hour Introduction to Java trainin
 
 ### Prerequisites
 - Java 17 JDK installed
-- IntelliJ IDEA (Community Edition is sufficient)
+- Visual Studio Code with Extension Pack for Java
 - Basic computer literacy
 
 ### Course Outline
@@ -20,7 +20,7 @@ This repository contains all materials for a 5-hour Introduction to Java trainin
    - Wrapper Types and Arrays
 
 3. **JVM and Tooling** (60 minutes)
-   - IntelliJ IDEA basics
+   - VS Code for Java development
    - Java compilation and JVM
    - Command-line tools
 
@@ -50,7 +50,7 @@ Live coding demonstration files:
 
 ### Documentation
 - `SETUP.md` - Environment setup instructions for students
-- `INTELLIJ_PLAIN_JAVA.md` - Guide for non-Maven/Gradle projects
+- `VSCODE_PLAIN_JAVA.md` - Guide for non-Maven/Gradle projects in VS Code
 - `TESTING_APPROACH.md` - Testing without external dependencies
 - `slides.md` - Slidev presentation slides (optimized for screen fit)
 - `CLAUDE.md` - Claude Code integration and project context
@@ -72,11 +72,12 @@ Live coding demonstration files:
 - Run presentation: `slidev slides.md`
 - Recent improvements: All tables and long content use two-column layouts for better screen fit
 
-### IntelliJ Project Setup
-1. Create new Java project (not Maven/Gradle)
-2. Use Java 17 SDK
-3. Source folder: `src/`
-4. Output folder: `out/`
+### VS Code Project Setup
+1. Create new folder for your project
+2. Open folder in VS Code
+3. Create `src/` folder for source files
+4. VS Code will automatically compile to `bin/`
+5. Ensure Extension Pack for Java is installed
 
 ### Testing Approach
 The course uses simple main method tests instead of JUnit to:
@@ -93,11 +94,12 @@ The course uses simple main method tests instead of JUnit to:
 
 ## Quick Start for Students
 
-1. Open IntelliJ IDEA
-2. Create New Project → Java → Next → Name: "JavaTraining"
-3. Copy exercise files to `src/` folder
-4. Start with `Exercise1_SimpleFunctions.java`
-5. Run files directly with right-click → Run
+1. Open VS Code
+2. Create a new folder named "JavaTraining"
+3. Open the folder in VS Code (File → Open Folder)
+4. Create a `src/` subfolder and copy exercise files there
+5. Start with `Exercise1_SimpleFunctions.java`
+6. Run files with F5 (debug) or Ctrl+F5 (run without debug)
 
 ## Distribution
 

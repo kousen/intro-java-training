@@ -9,13 +9,13 @@ This is a **5-hour Introduction to Java training course** designed for enterpris
 - **Enterprise/Banking environments** with restricted internet access
 - **No external dependencies** - pure Java 17 only
 - **No build tools** - direct compilation and execution
-- **IntelliJ IDEA** as the primary development environment
+- **VS Code** as the primary development environment
 - **Self-contained materials** for offline use
 
 ### Course Structure (5 hours total)
 1. **Java Basics** (90 min) - Variables, methods, strings, flow control
 2. **Introduction to OO** (60 min) - Classes, objects, arrays, wrapper types  
-3. **JVM and Tooling** (60 min) - IntelliJ basics, compilation, command-line tools
+3. **JVM and Tooling** (60 min) - VS Code for Java, compilation, command-line tools
 4. **Java Types and Collections** (90 min) - Inheritance, interfaces, collections framework
 
 ## Repository Structure
@@ -26,7 +26,7 @@ This is a **5-hour Introduction to Java training course** designed for enterpris
 ├── demos/             # Live coding demonstration files
 ├── slides.md          # Slidev presentation (optimized for screen fit)
 ├── SETUP.md           # Environment setup for students
-├── INTELLIJ_PLAIN_JAVA.md  # Non-Maven/Gradle project guide
+├── VSCODE_PLAIN_JAVA.md   # Non-Maven/Gradle project guide for VS Code
 ├── TESTING_APPROACH.md     # Testing without external dependencies
 └── CREATE_ZIP.sh      # Creates student and instructor material packages
 ```
@@ -43,7 +43,7 @@ This is a **5-hour Introduction to Java training course** designed for enterpris
 ### Specific Fixes Applied
 - Contact Info → Two-column layout (contact vs social media)
 - Access Modifiers → Table + key points summary
-- IntelliJ Productivity Tips → Categorized shortcuts in columns
+- VS Code Productivity Tips → Categorized shortcuts in columns
 - Collections Guide → Basic vs Advanced collections
 - Primitive Types → Split into two columns
 - Wrapper Types → Split into two columns
