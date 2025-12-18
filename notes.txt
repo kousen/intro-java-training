@@ -1,0 +1,24 @@
+When we have a dot:
+
+------ . -------
+
+There are only two things that can go to the left of a dot:
+- Class name
+- reference
+
+There are only two things that can go to the right of a dot:
+- attribute (field, property, data ...)
+- method()
+
+"The" main method has the signature:
+    public static void main(String[] args)
+
+    - that is the starting point of any command line Java application
+
+i += 2 is equivalent to i = i + 2
+*=, -=, /=, %= less common, but work as expected
+
+Ternary operator:
+    ... boolean condition ... ? ... if true ... : ... if false
+
+    It's an if-else statement on its side

@@ -7,30 +7,30 @@ package exercises.basics;
  */
 public class Exercise2_StringOperations {
     
-    // TODO: Create a full name from first and last name with a space between
+    // Create a full name from first and last name with a space between
     public static String createFullName(String firstName, String lastName) {
         // Your code here
-        return "";
+        return firstName + " " + lastName;
     }
     
-    // TODO: Check if an email contains the @ symbol
+    // Check if an email contains the @ symbol
     public static boolean isValidEmail(String email) {
         // Your code here
-        return false;
+        return email.contains("@");
     }
     
-    // TODO: Extract the domain from an email address
+    // Extract the domain from an email address
     // Example: "user@example.com" -> "example.com"
     public static String extractDomain(String email) {
         // Your code here
-        return "";
+        return email.substring(email.indexOf("@") + 1);
     }
     
-    // TODO: Count the number of words in a sentence
+    // Count the number of words in a sentence
     // Assume words are separated by spaces
     public static int countWords(String sentence) {
         // Your code here
-        return 0;
+        return sentence.split(" ").length;
     }
     
     public static void main(String[] args) {
@@ -56,9 +56,9 @@ public class Exercise2_StringOperations {
         System.out.println();
         
         System.out.println("Testing countWords:");
-        int wordCount = countWords("The quick brown fox jumps");
+        int wordCount = countWords("The quick brown fox jumps over the lazy dog");
         System.out.println("Result: " + wordCount);
-        System.out.println("Expected: 5");
-        System.out.println("Pass: " + (wordCount == 5));
+        System.out.println("Expected: 9");
+        System.out.println("Pass: " + (wordCount == 9));
     }
 }

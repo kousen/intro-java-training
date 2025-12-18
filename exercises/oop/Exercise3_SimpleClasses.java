@@ -33,7 +33,6 @@ public class Exercise3_SimpleClasses {
     public static void main(String[] args) {
         System.out.println("=== Testing BankAccount ===");
         // Uncomment when you implement BankAccount
-        /*
         BankAccount account = new BankAccount(1000);
         System.out.println("Initial balance: " + account.getBalance());
         account.deposit(500);
@@ -42,24 +41,19 @@ public class Exercise3_SimpleClasses {
         System.out.println("After withdrawal: " + account.getBalance());
         account.withdraw(2000); // Should fail
         System.out.println("After failed withdrawal: " + account.getBalance());
-        */
-        
+      
         System.out.println("\n=== Testing Rectangle ===");
         // Uncomment when you implement Rectangle
-        /*
         Rectangle rect = new Rectangle(5, 3);
         System.out.println("Area: " + rect.calculateArea());
         System.out.println("Perimeter: " + rect.calculatePerimeter());
-        */
         
         System.out.println("\n=== Testing Student ===");
         // Uncomment when you implement Student
-        /*
         double[] grades = {85.5, 90.0, 78.5, 92.0, 88.0};
         Student student = new Student("Alice", grades);
         System.out.println("Student: " + student.name);
         System.out.println("Average grade: " + student.calculateAverage());
         System.out.println("Highest grade: " + student.getHighestGrade());
-        */
     }
 }
