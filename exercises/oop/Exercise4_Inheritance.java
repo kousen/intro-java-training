@@ -1,43 +1,89 @@
 package exercises.oop;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 /**
  * Exercise 4: Working with Inheritance
  * <p>
  * Create an inheritance hierarchy for employees.
  */
 public class Exercise4_Inheritance {
+
+    interface Payable {
+        double calculateTotalPay();
+    }
     
-    // TODO: Create base class Employee with:
-    // - protected fields: name (String), salary (double)
-    // - Constructor to initialize both fields
-    // - getters for both fields
-    // - method calculateBonus() that returns 0.05 * salary (5% bonus)
+    static class Employee implements Payable {
+        protected final String name;
+        protected final double salary;
+
+        Employee(String name, double salary) {
+            this.name = name;
+            this.salary = salary;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public double getSalary() {
+            return salary;
+        }
+
+        public double calculateBonus() {
+            return 0.05 * salary;
+        }
+
+        @Override
+        public final double calculateTotalPay() { // template method
+            return salary + calculateBonus();
+        }
+    }
     
     
-    // TODO: Create Manager class that extends Employee with:
-    // - additional field: teamSize (int)
-    // - Constructor that takes name, salary, and teamSize
-    // - Override calculateBonus() to return 0.10 * salary (10% bonus)
-    // - method getTeamSize()
+    static class Manager extends Employee {
+        private final int teamSize;
+
+        Manager(String name, double salary, int teamSize) {
+            super(name, salary);
+            this.teamSize = teamSize;
+        }
+
+        @Override
+        public double calculateBonus() {
+            return 0.10 * salary;
+        }
+
+        public int getTeamSize() {
+            return teamSize;
+        }
+    }
     
     
-    // TODO: Create Developer class that extends Employee with:
-    // - additional field: programmingLanguage (String)
-    // - Constructor that takes name, salary, and programmingLanguage
-    // - Override calculateBonus() to return 0.07 * salary (7% bonus)
-    // - method getProgrammingLanguage()
-    
-    
-    // TODO: Create interface Payable with:
-    // - method calculateTotalPay() that returns salary + bonus
-    // Make all employee classes implement this interface
-    
+    static class Developer extends Employee {
+        private final String programmingLanguage;
+
+        Developer(String name, double salary, String programmingLanguage) {
+            super(name, salary);
+            this.programmingLanguage = programmingLanguage;
+        }
+
+        @Override
+        public double calculateBonus() {
+            return 0.07 * salary;
+        }
+
+        public String getProgrammingLanguage() {
+            return programmingLanguage;
+        }
+    }
     
     public static void main(String[] args) {
         System.out.println("=== Testing Employee Hierarchy ===");
         
         // Uncomment when you implement the classes
-        /*
+        
         Employee emp = new Employee("John Doe", 50000);
         Manager mgr = new Manager("Jane Smith", 80000, 5);
         Developer dev = new Developer("Bob Johnson", 70000, "Java");
@@ -61,10 +107,13 @@ public class Exercise4_Inheritance {
         // Test polymorphism
         System.out.println("\n=== Polymorphism Test ===");
         Employee[] employees = {emp, mgr, dev};
+        NumberFormat currencyFormat = 
+                NumberFormat.getCurrencyInstance(Locale.GERMANY);
+        System.out.println(currencyFormat.getClass().getName());
         for (Employee e : employees) {
-            System.out.println(e.getName() + " total pay: $" + 
-                             (e.getSalary() + e.calculateBonus()));
+            System.out.println(e.getName() + " total pay: " + 
+                    currencyFormat.format(e.calculateTotalPay()));
         }
-        */
+        
     }
 }

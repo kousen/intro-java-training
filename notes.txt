@@ -22,3 +22,12 @@ Ternary operator:
     ... boolean condition ... ? ... if true ... : ... if false
 
     It's an if-else statement on its side
+
+Abstract:
+    - abstract methods have no body
+    - child classes MUST override abstract methods (or they too must be abstract)
+    - abstract classes can NOT be instantiated
+
+In an interface
+    - public is the default
+    - methods are abstract by default

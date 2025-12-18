@@ -16,4 +16,11 @@ public class Rectangle {
     public double calculatePerimeter() {
         return 2 * (width + height);
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle [width=" + width + ", height=" + height + "]";
+    }
+
+    
 }

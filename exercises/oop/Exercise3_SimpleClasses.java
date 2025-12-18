@@ -47,6 +47,7 @@ public class Exercise3_SimpleClasses {
         Rectangle rect = new Rectangle(5, 3);
         System.out.println("Area: " + rect.calculateArea());
         System.out.println("Perimeter: " + rect.calculatePerimeter());
+        System.out.println(rect);
         
         System.out.println("\n=== Testing Student ===");
         // Uncomment when you implement Student
@@ -55,5 +56,8 @@ public class Exercise3_SimpleClasses {
         System.out.println("Student: " + student.name);
         System.out.println("Average grade: " + student.calculateAverage());
         System.out.println("Highest grade: " + student.getHighestGrade());
+
+
+
     }
 }

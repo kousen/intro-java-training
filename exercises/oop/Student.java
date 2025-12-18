@@ -14,11 +14,11 @@ public class Student {
     }
 
     public double calculateAverage() {
-//        double sum = 0;
-//        for (double grade : grades) {
-//            sum += grade;
-//        }
-//        return grades.length > 0 ? sum / grades.length : 0;
+    //    double sum = 0;
+    //    for (double grade : grades) {
+    //        sum += grade;
+    //    }
+    //    return grades.length > 0 ? sum / grades.length : 0;
 
         return DoubleStream.of(grades)
                 .average()
