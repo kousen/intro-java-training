@@ -8,6 +8,8 @@ package demos;
 public class StringDemo {
     
     public static void main(String[] args) {
+        System.out.println("String and int: " + (2 + "3"));
+
         System.out.println("=== String Creation ===");
         String s1 = "Hello";
         String s2 = new String("Hello");

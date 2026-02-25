@@ -36,6 +36,8 @@ public class FizzBuzz {
                 output += "Buzz";
             }
             
+            // Ternary operator to print either the number or the Fizz/Buzz string
+            // (boolean expression) ? (value if true) : (value if false)
             System.out.println(output.isEmpty() ? i : output);
         }
     }

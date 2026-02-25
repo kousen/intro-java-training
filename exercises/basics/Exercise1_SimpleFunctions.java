@@ -11,20 +11,20 @@ public class Exercise1_SimpleFunctions {
     // TODO: Write a function that multiplies two integers
     public static int multiply(int a, int b) {
         // Your code here
-        return 0;
+        return a * b;
     }
     
     // TODO: Write a function that returns true if a number is even
     public static boolean isEven(int number) {
         // Your code here
-        return false;
+        return number % 2 == 0;
     }
     
     // TODO: Write a function that converts Celsius to Fahrenheit
     // Formula: F = C * 9/5 + 32
     public static double celsiusToFahrenheit(double celsius) {
         // Your code here
-        return 0.0;
+        return celsius * 9.0/5.0 + 32;
     }
     
     // Test your methods here
