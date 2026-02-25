@@ -1,5 +1,7 @@
 package demos;
 
+import java.time.LocalDate;
+
 /**
  * Classes and Objects Demo
  * 
@@ -18,6 +20,7 @@ public class ClassesObjectsDemo {
         private String name;
         private int age;
         private String email;
+        private LocalDate birthDate;  // Example of a more complex field
         
         // Default constructor
         public Person() {
