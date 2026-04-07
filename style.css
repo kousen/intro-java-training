@@ -1,0 +1,4 @@
+/* Hide the Slidev goto dialog (right-side slide navigation panel) */
+#slidev-goto-dialog {
+  display: none !important;
+}

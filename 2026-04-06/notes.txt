@@ -1,0 +1,150 @@
+Every expression in Java has the form:
+
+--------- . ----------
+
+Only two things can go to the left of the dot:
+- reference --> remote control to an object
+- ClassName
+
+Only two things can go to the right of the dot:
+- attribute (field, property, etc)
+- method (function, procedure, etc)
+
+You know the LHS is a class if it starts with a capital letter
+    (Not a compiler requirement, but an almost universal convention)
+You know RHS is a method if it has ()
+
+----- static ------
+The keyword "static":
+- on an attribute, it means _shared_
+- on a method, it means "can be called without an instance"
+
+String name = "Dolly";
+name.length(); --> that is a method called on a reference
+
+Math.random(); --> that is a method called on a class name
+    This method returns a "uniformly distributed pseudo-random 
+    double between 0.0 and 1.0"
+
+If a method is called from the class name, it MUST be static
+
+------ final ------
+final on an attribute means it can't be changed
+    A person's date of birth is final
+    This is final, but NOT static
+
+final on a method means it can't be overridden
+    Can't be changed by inheritance
+
+final on a class means it can't be extended
+    Can't be changed by inheritance
+
+
+final but not static --> every instance has its own fixed value
+static but not final --> all instances share the same value, but it can change (like a bank account interest rate)
+
+static and final together --> constant
+    constants in Java are usually written in ALL UPPERCASE
+
+attributes and methods start with a lowercase letter
+class names start with an uppercase letter
+Both use "camel case" after that
+
+Strings have a length() method
+but arrays have a length attribute
+
+--- Logical AND and OR ---
+The logical operators && and || both short-circuit
+a && b is only true if both a and b are true, so
+ if a is false, there's no need to evaluate b
+ if (a != null && a.size() > 0) ...
+
+Likewise, a || b short-circuits if a is true.
+
+i += 2 means i = i + 2
+i -= 2 means i = i - 2
+i *= 2 means i = i * 2
+i /= 2 means i = i / 2
+i %= 2 means i = i % 2
+
+--- Ternary operator ? .. : ..
+
+The ternary operator is just an if statement on its side
+if (...) ? then ... : else ...
+
+output.isEmpty() ? i : output
+
+----- POJO -------
+A POJO is a Plain Old Java object
+usually means a simple class to encapsulate some data
+often with only getters and setters as its methods
+
+If a class has NO constructors, the compiler provides
+a no-arg (default) constructor for you.
+
+The keyword "new" can only be used with constructors, 
+and constructors can only be called with the word "new".
+
+---- Comments ------
+// single line comment
+
+/* 
+    multi-
+    line 
+    comment 
+*/
+
+/**
+ * JavaDoc comment
+ */
+
+ ----- Arrays ------
+ Creating an array is a three-step process:
+ 1. Create the reference to the array
+ 2. Dimension the array (use the word "new")
+ 3. Populate the array
+
+Array of primitives (default values are automatically zero in that type)
+ int[] grades = new int[5];
+ grades[0] = 99;
+ grades[1] = 98;
+ grades[2] = 97;
+ grades[3] = 96;
+ grades[4] = 95;
+
+ Array of objects (default values are null)
+ BankAccount[] accounts = new BankAccount[5];
+ accounts[0] = new BankAccount(1000);
+ accounts[1] = new BankAccount(2000);
+ accounts[2] = new BankAccount(3000);
+ accounts[3] = new BankAccount(4000);
+ accounts[4] = new BankAccount(5000);
+
+ ----- inheritance --------
+
+ The child can do everything the parent can do, and more.
+    If the code is expecting a parent, you can supply a 
+    child and everything will work.
+
+They may do it differently --> that's _overriding_
+
+Overloading --> same method name and return type, 
+    but different number or type of arguments
+
+Overriding --> same method signature (name, args, return type), but
+    different implementation
+
+You must override methods marked _abstract_ in the parent
+    or the class will not compile
+    unless it, too, is an abstract class.
+
+You can only have one parent (extends),
+    but you can implement as many interfaces as you want
+
+If a class doesn't extend any specific class, it extends Object
+    Object contains: boolean equals(Object), int hashCode(), String toString()
+    The toString() is probably the most overridden method in all of Java
+
+Favor composition over inheritance
+    composition is the "has a" relationship
+    inheritance is the "is a kind of" relationship
