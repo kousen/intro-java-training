@@ -1,0 +1,127 @@
+The "signature" of a method consists of:
+ - the method return type
+ - the method name
+ - the method parameters
+
+"The" main method is:
+    public static void main(String[] args)
+This is where all Java command line programs start running.
+
+All method and property access in Java looks like:
+
+----------- . -----------
+
+On the LHS, there are two possibilities:
+ - reference --> like "remote control" for an object
+ - ClassName
+
+On the RHS, there are two possibilities:
+ - attribute (field, property, data)
+ - method (function, procedure, behavior) --> MUST have parentheses
+
+ If the LHS is a class name, then whatever is on the RHS must be static.
+
+ static -->
+  - for attributes, it means shared by every instance of the class
+  - for methods, it means it can be called without an instance
+
+final -->
+  - for an attribute, means it can't be changed
+  - for a method, means it can't be overridden (can't be changed by inheritance)
+  - for a class, means it can't be extended (can't be changed by inheritance)
+
+Examples of final vs static:
+  - savings account interest rate would be _static_ but not _final_
+  - data of birth on person would be _final_ but not _static_
+  - _static_ and _final_ together is a constant: Math.PI
+
+
+"Short circuiting" operators && and ||:
+  - if (name != null && name.length() > 10) { // guard condition
+        System.out.println("Long name");
+    } else {
+        System.out.println("Short name");
+    }
+
+&& is called Logical AND, and || is called Logical OR.
+
+Ternary operator ?:
+    Just an "if" statement on its side
+    (... boolean condition ...) ? ... if true ... : ... if false ...
+
+A class is like a database table definition
+    The attributes of the class are column names and types
+    The methods don't really fit
+
+An object is like each row of the table
+
+Classes are instantiated using the word "new" and a constructor.
+    Constructors an only be called from the word new
+    The word "new" can only be used with Constructors
+
+Comments in Java:
+    // comments to the end of the current line
+    
+    /* 
+    ... 
+    */ multiline comment
+
+    /**
+    ... multiple lines
+    */ JavaDoc comment
+
+Java libraries come as "jar" files --> Java archive
+    They are zip files for Java code
+    The compiler and the runtime env can read inside them without expanding them on the disk
+
+
+Working with arrays involves three steps:
+    1. Declare the reference to the array
+    2. Dimension the array
+    3. Populate the array
+
+Inheritance
+    - "is a kind of" relationship
+    - "The child can do everything the parent can do, and more"
+    - The child might do things differently --> _overriding_
+
+parent -- child
+base class -- derived class
+superclass -- subclass
+
+private doesn't mean anything to do with security
+private means "this is an implementation detail, subject to change without notice"
+public means anybody can call this at any time
+
+Common practice is:
+    Make data (field) private
+    Make methods public
+    Most public fields are constants (static and final)
+
+The gamble is that the data structures will change
+    more frequently than the method signatures
+
+
+If you need a method to exist, but have no default way of implementing it,
+    Make the method _abstract_
+    Then, child classes MUST implement it (or they, too, are abstract)
+    The class much then be abstract
+    The class can never be instantiated
+
+When to use inheritance:
+
+    Create a collection of superclass type (Employee)
+    Fill it with subclass instances (Salaried, Hourly, ...)
+    Loop over the collection, calling the same method on each.
+    All the individual types use their version of that method --> polymorphism and dynamic binding
+
+Composition:
+    - "has a" relationship
+    A Car has an Engine
+    A Car has an array of Tire
+
+General principle: favor composition over inheritance.
+
+Rule in Java is:
+    A class can only have one superclass
+    But a class can implement any number of interfaces
