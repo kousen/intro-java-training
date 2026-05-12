@@ -1,0 +1,50 @@
+static:
+    static methods can be called without a class
+    static attributes are shared by all instances of the class
+
+reference   attribute
+--------- . ---------
+ClassName   method()
+
+System.out.println("Hello, World!");
+
+From the point of view of the FIRST dot:
+    System is a class (initial capital)
+    out is an attribute (no parens) of PrintStream
+
+From the point of view of the SECOND dot:
+    out is a reference
+    println is a method (with parens) in PrintStream
+
+The term _overloading_ means "same method name,
+and same return type, but different number or type
+of arguments".
+
+Ternary operator:
+    if (...) then ... else ...
+    output.isEmpty() ? i : output
+
+Constructors:
+    - match the name of the class
+    - have NO return type
+    - can only be called with the word "new"
+
+Inheritance
+    "The child can do everything the parent can do, and more."
+
+    Inheritance is the "is a kind of" relationship. 
+    A car is a kind of vehicle
+    A giraffe is a kind of animal
+    A rectangle is a kind of shape
+
+    The goal of inheritance (most of the time) is:
+    - Make a collection of parent references
+    - Fill the collection with child instances
+    - Call the same method on each in a loop
+    - Each instance does its own thing
+
+Composition is the "has a" relationship
+    A car has an engine
+    A car has tires
+
+Good design favors composition over inheritance
